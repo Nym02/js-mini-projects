@@ -114,5 +114,6 @@ document.querySelector('#book-list').addEventListener('click', e => {
 
   //remove book from localstorage
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+
   UI.showAlert('Book Removed', 'info');
 });
