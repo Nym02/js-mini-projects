@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,600&display=swap");
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+.bg-timer {
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 10rem;
+}
+.bg-header {
+  font-size: 3rem;
+  border-bottom: 0.1rem solid;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.days {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+.days-l {
+}
+.days-text {
+}
