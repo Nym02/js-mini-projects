@@ -24,6 +24,9 @@ plusBtn1.addEventListener('click', function(){
     document.getElementById('product1').innerText = result;
     console.log(result);
 
+    let subtotalNumber = parseFloat(subtotal);
+    let currentSubtotal = subtotalNumber + result;
+    console.log(currentSubtotal);
  
 
     disabledBtn(minusBtn1, res);
@@ -40,10 +43,11 @@ plusBtn2.addEventListener('click', function(){
     document.getElementById('product2').innerText = result;
     console.log(result);
 
- 
+    let subtotalNumber = parseFloat(subtotal);
+    let currentSubtotal = subtotalNumber + result;
+    console.log(currentSubtotal);
+
     disabledBtn(minusBtn2, res);
-    
-    
 });
 
 minusBtn1.addEventListener('click', function(){
@@ -52,6 +56,11 @@ minusBtn1.addEventListener('click', function(){
 
     let result = productTotal(product1, res);
     document.getElementById('product1').innerText = result;
+
+    let subtotalNumber = parseFloat(subtotal);
+    let currentSubtotal = subtotalNumber + result;
+    console.log(currentSubtotal);
+
     disabledBtn(minusBtn1, res);
 });
  
