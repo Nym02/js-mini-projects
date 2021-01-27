@@ -29,19 +29,20 @@
 
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default">
+                    <button id="minusBtn1" class="btn btn-default">
                       <i class="fas fa-minus"></i>
                     </button>
                     <input
+                      id="qty1"
                       type="text"
                       class="form-control text-center"
                       value="1"
                     />
-                    <button class="btn btn-default">
+                    <button id="plusBtn1" class="btn btn-default">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$1219</h5>
+                  <h5>$<span id="product1">10</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -55,19 +56,20 @@
                 </div>
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default">
+                    <button id="minusBtn2" class="btn btn-default">
                       <i class="fas fa-minus"></i>
                     </button>
                     <input
+                      id="qty2"
                       type="text"
                       class="form-control text-center"
                       value="1"
                     />
-                    <button class="btn btn-default">
+                    <button id="plusBtn2" class="btn btn-default">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$59</h5>
+                  <h5>$<span id="product2">5</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -82,9 +84,9 @@
                 </div>
 
                 <div class="col-md-4 status">
-                  <h5>$1,278</h5>
-                  <h5>$0</h5>
-                  <h5>$1,278</h5>
+                  <h5>$ <span id="subtotal">1,280</span></h5>
+                  <h5>$ <span id="tax">0</span></h5>
+                  <h5>$ <span id="total">1,278</span></h5>
                 </div>
               </div>
             </div>
