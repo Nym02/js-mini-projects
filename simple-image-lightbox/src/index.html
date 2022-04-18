@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Lightbox</title>
+
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="">
+    <!-- lightbox popup  -->
+    <div class="relative">
+        <div id="lightbox-popup" class="fixed top-0 left-0 bg-black w-full h-screen bg-opacity-80 invisible  z-50">
+            <div class="w-full flex justify-center items-center h-full">
+                <div class="max-w-md sm:max-w-lg lg:max-w-2xl px-4 relative">
+                    <img id="lightbox-popup-img" class="w-full object-cover" alt="">
+
+                    <!-- popup close button  -->
+                    <div onclick="hideLightboxPopup()" class="absolute bg-white top-0 right-4 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <!-- popup close button  -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- lightbox popup  -->
+    <div class="w-full max-w-7xl mx-auto px-6 flex justify-center items-center h-screen">
+        <div class=" sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-2">
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxfHxmb29kfGVufDB8fHx8MTY0OTE0MjEyNA&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwzfHxmb29kfGVufDB8fHx8MTY0OTE0MjEyNA&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw4fHxmb29kfGVufDB8fHx8MTY0OTE0MjEyNA&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw5fHxmb29kfGVufDB8fHx8MTY0OTE0MjEyNA&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxNHx8Zm9vZHxlbnwwfHx8fDE2NDkxNDIxMjQ&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxNXx8Zm9vZHxlbnwwfHx8fDE2NDkxNDIxMjQ&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxOXx8Zm9vZHxlbnwwfHx8fDE2NDkxNDIxMjQ&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwyNHx8Zm9vZHxlbnwwfHx8fDE2NTAyOTg4OTg&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwyN3x8Zm9vZHxlbnwwfHx8fDE2NTAyOTg4OTg&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1577303935007-0d306ee638cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw3OHx8Zm9vZHxlbnwwfHx8fDE2NTAyOTg5NjE&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw3Nnx8Zm9vZHxlbnwwfHx8fDE2NTAyOTg5NjE&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+            <div class="max-w-md sm:max-w-full sm:mx-0 mx-auto mb-4 sm:mb-0">
+                <img data-lightbox="lightbox-img" class="w-full h-full object-cover cursor-pointer"
+                    src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw0fHxzdGVha3xlbnwwfHx8fDE2NTAyOTkwMTU&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./dist/js/main.js"></script>
+</body>
+
+</html>

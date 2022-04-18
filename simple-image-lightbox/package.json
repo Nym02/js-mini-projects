@@ -1,0 +1,13 @@
+{
+  "name": "simple-image-lightbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nayeem M. Muzahid",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/dist/input.css -o ./src/dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
