@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+  background-color: white;
+}
+
+.cursor {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: difference;
+  opacity: 0;
+  pointer-events: none;
+}
+.inner-cursor {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  -webkit-mix-blend-mode: difference;
+  transition: width 0.2s, height 0.2s;
+}
+.grow {
+  width: 28px !important;
+  height: 28px !important;
+}
+.hover-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-link {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
